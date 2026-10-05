@@ -57,7 +57,7 @@ GO
 TRUNCATE TABLE staging.raw_encounters;
 GO
 BULK INSERT staging.raw_encounters
-FROM 'E:\DEPI\Tech\Data Base\Mini Project 2\Mini_Project_02\Central_Superstore.csv'
+FROM 'C:\Users\Mohamed Ahmed Rashed\Desktop\Mini_Project_03\Central_Superstore.csv'
 WITH (
     FIRSTROW = 2,
     FIELDTERMINATOR = ',',
@@ -66,7 +66,7 @@ WITH (
     FIELDQUOTE = '"',
     CODEPAGE = '65001',
     MAXERRORS = 0,
-    ERRORFILE = 'E:\DEPI\Tech\Data Base\Mini Project 2\Mini_Project_02\raw_encounters_err.log'
+    ERRORFILE = 'C:\Users\Mohamed Ahmed Rashed\Desktop\Mini_Project_03\raw_encounters_err.log'
 );
 GO
 
@@ -156,10 +156,11 @@ BEGIN
         has_invalid_value BIT NOT NULL DEFAULT 0,
         has_outlier_value BIT NOT NULL DEFAULT 0,
         CONSTRAINT PK_silver_encounters PRIMARY KEY ("Row ID")
-        );
+        )
 END;
 GO
 TRUNCATE TABLE silver.encounters;
+GO
 WITH bronze_latest AS (
     SELECT *,
         ROW_NUMBER() OVER (
@@ -389,7 +390,7 @@ SELECT
 
 FROM flagged
 WHERE "Row ID" IS NOT NULL;
-
+GO
 
 SELECT *
 FROM silver.encounters 
@@ -497,7 +498,7 @@ CREATE TABLE gold.FactSales (
         FOREIGN KEY (LocationKey)
         REFERENCES gold.dimLocation(LocationKey)
 );
-
+GO
 
 
 -- 1 DI CUSTOMER
@@ -523,7 +524,7 @@ WHERE has_invalid_value = 0
       WHERE d."Customer ID" = silver.encounters."Customer ID"
   );
 
-
+GO
 
 -- 2 DIMDATE
 
@@ -572,7 +573,7 @@ WHERE has_invalid_value = 0
       WHERE d.DateKey =
             CONVERT(INT, CONVERT(CHAR(8), CAST(silver.encounters."Order Date" AS DATE), 112))
   );
-
+GO
 
 -- 3 DIM PROUCT
 
@@ -606,7 +607,7 @@ FROM
       AND "Product ID" IS NOT NULL
 ) AS Temp
 WHERE rn = 1;
-
+GO
 
 -- 4 DIMLOCATION
 
@@ -641,7 +642,7 @@ WHERE has_invalid_value = 0
         AND d."Postal Code" = silver.encounters."Postal Code"
         AND d."Region" = silver.encounters."Region"
   );
-
+GO
 
 -- 5 FACT SALES
 
@@ -712,7 +713,7 @@ WHERE s.has_invalid_value = 0
       FROM gold.FactSales f
       WHERE f."Row ID" = s."Row ID"
   );
-
+GO
 --============================================================================================
   SELECT *
   from gold.dimCustomer; --629 rows
@@ -743,7 +744,7 @@ LEFT JOIN gold.dimCustomer AS dc
 ON  fs.CustomerKey=dc.CustomerKey
 GROUP BY dc.Segment
 ORDER BY "Average Sales" DESC;
-
+GO
 
 -- 2. Which Categories have the highest average Quantity?
 SELECT 
@@ -755,7 +756,7 @@ LEFT JOIN gold.DimProduct AS dp
     ON fs.ProductKey = dp.ProductKey
 GROUP BY dp.Category
 ORDER BY AVG(fs.Quantity) DESC;
-
+GO
 
 -- 3. Which Products have the highest total Quantity sold?
 
@@ -765,7 +766,7 @@ LEFT JOIN gold.DimProduct AS dp
     ON fs.ProductKey = dp.ProductKey
 GROUP BY "Product Name"
 ORDER BY "total Quantity" DESC;
-
+GO
 
 
 -- 4. Which States have generated Sales above 50,000
@@ -778,8 +779,8 @@ LEFT JOIN gold.dimLocation AS dl
 ON fs.LocationKey=dl.LocationKey
 GROUP BY dl.State
 HAVING SUM(fs.Sales)>50000 AND SUM(fs.Profit)<5000
-ORDER BY "Total Sales" DESC
-
+ORDER BY "Total Sales" DESC;
+GO
 
 
 -- 5 Which products have generated more total sales than the average total sales of all products?
@@ -802,6 +803,7 @@ HAVING SUM(fs.Sales) > (
     ) AS ProductSales
 )
 ORDER BY [Total Sales] DESC;
+GO
 
 -- 6 Which categories have a total profit above the average total profit of all categories?
 
@@ -820,7 +822,8 @@ WHERE TotalProfit > (
     select AVG(TotalProfit)
     from CategoryProfit
 )
-ORDER BY TotalProfit DESC
+ORDER BY TotalProfit DESC;
+GO
 
 
 -- 7 What are the top 3 products by total sales within each category?
@@ -850,7 +853,7 @@ SELECT
 FROM RankedProducts
 WHERE ProductRank <= 3
 ORDER BY Category, ProductRank;
-
+GO
 
 -- 8 For each state, what is the difference between its total sales and the previous state's total sales when states are ordered by total sales?
 
@@ -877,7 +880,7 @@ SELECT
     TotalSales - PreviousSales AS SalesDifference
 FROM RankedState
 ORDER BY TotalSales DESC;
-
+GO
 
 
 -- 9 Which products have the highest profit margin within each category?
@@ -900,8 +903,8 @@ RANK AS(
 SELECT [Product Name],[Category],[Total Profit],[Total Sales],[Profit Margin]
     From RANK
     WHERE ROWRANK =1
-    ORDER BY [Profit Margin] DESC
-
+    ORDER BY [Profit Margin] DESC;
+GO
 
 -- 10 Which customer segments have a higher total profit than the average total profit across all customer segments?
 
@@ -920,4 +923,5 @@ Average_Profit AS(
 )
 SELECT *
 FROM Average_Profit
-WHERE [Total Profit] > AvgProfit
+WHERE [Total Profit] > AvgProfit;
+GO
