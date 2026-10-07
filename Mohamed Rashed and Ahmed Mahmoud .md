@@ -1,0 +1,14 @@
+# Here I'll write some important notes as I go further into making my tableau wrokbook.
+- The color scheme should be a maximum of 4 colors, as suggested from ENG. Baraa on YouTube.
+- my part is about sales in relation to the customer dimention.
+- I'll utilise the Date dimention to be able to make meaningful analysis from the sales fact table and the customer dimention.
+- The first dashboard will be a sales dashboard.
+- the sales dashboard will contain: Total sales, Total profit, Total Quantity, Sales & Profit By Segment (customer segment), and potentially a Trends over Time if relevant. 
+- Since It's my first tableau project, I'll be following "Data with Baraa" tutorial on creating a tableau project. I'll only apply what's relevant to my part.
+- usually the fact table should include the date information, but our leader Hamza decided that the date will be a separate dimention, as this is now the database design that we rely on. I wonder If that's going to make things harder or easier for me as I tackle this project.
+- this is now just lots of self-talk, but will be beneficial to make creating a well structured documentation easier in the future. 
+- I just corrected "Taqeyy and Seif"'s tableau workbook's connection settings, it was taking a whole minute to load up because the SQL servername wasn't written correctly in it.
+- I'll check data type and prepare my data connection before starting.
+- connections got made correctlly automatically by tableau.
+- only in dimlocation, Region column's type isn't correctly choosen by tableau. I need to infrom my team, since the issue exists on their workbooks too.
+- I finished watching how to build the first 3 charts "Total sales summary", "Total Profit summary", "Total quantity summary". (didn't expect it would be lots of steps and customization). still needs to apply that once I get enough rest. 
