@@ -14,3 +14,4 @@
 - I finished watching how to build the first 3 charts "Total sales summary", "Total Profit summary", "Total quantity summary". (didn't expect it would be lots of steps and customization). still needs to apply that once I get enough rest.
 - I almost done making my first chart (the Total Sales summary) 
 - I finished making and cleaning the first chart!
+- Creating the Profit chart was way much easier, I just duplicated and edited the sales chart to represent profit, looking clean too!
