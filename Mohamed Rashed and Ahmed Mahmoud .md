@@ -11,4 +11,5 @@
 - I'll check data type and prepare my data connection before starting.
 - connections got made correctlly automatically by tableau.
 - only in dimlocation, Region column's type isn't correctly choosen by tableau. I need to infrom my team, since the issue exists on their workbooks too.
-- I finished watching how to build the first 3 charts "Total sales summary", "Total Profit summary", "Total quantity summary". (didn't expect it would be lots of steps and customization). still needs to apply that once I get enough rest. 
+- I finished watching how to build the first 3 charts "Total sales summary", "Total Profit summary", "Total quantity summary". (didn't expect it would be lots of steps and customization). still needs to apply that once I get enough rest.
+- I almost done making my first chart (the Total Sales summary) 
