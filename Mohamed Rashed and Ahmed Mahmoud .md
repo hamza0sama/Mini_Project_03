@@ -18,3 +18,4 @@
 - built the third chart (the total Quantity chart)
 - built the fourth chart (the Segment comparison chart)
 - built the fifth chart (the Weekly Trends chart)
+- almost done finishing the Sales Dashboard.
