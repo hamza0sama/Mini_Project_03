@@ -16,3 +16,4 @@
 - I finished making and cleaning the first chart!
 - Creating the Profit chart was way much easier, I just duplicated and edited the sales chart to represent profit, looking clean too!
 - built the third chart (the total Quantity chart)
+- built the fourth chart (the Segment comparison chart)
