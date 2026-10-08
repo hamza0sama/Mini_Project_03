@@ -19,3 +19,4 @@
 - built the fourth chart (the Segment comparison chart)
 - built the fifth chart (the Weekly Trends chart)
 - almost done finishing the Sales Dashboard.
+- Finally, I have built the Sales Dashboard, with an interactive Segment comparison chart!
