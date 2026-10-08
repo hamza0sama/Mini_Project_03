@@ -25,3 +25,5 @@
 - finalized formatting, now all dashboards are ready!
 - add category and sub-category filters.
 - made the 3 sales KPI react to filters, although the difference number still doesn't react.
+- the previous window_sum wrapping method was lame and only works on non-distinct aggs, what's more lame is Baraa, not using the seprate sheet method, causing me to discover it myslef and implement it.
+- Now the customer dashboard is fully functional and reactive to filters.
