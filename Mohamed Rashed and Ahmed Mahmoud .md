@@ -20,3 +20,5 @@
 - built the fifth chart (the Weekly Trends chart)
 - almost done finishing the Sales Dashboard.
 - Finally, I have built the Sales Dashboard, with an interactive Segment comparison chart!
+- built all the customers chart and built the customer dashboard using the same layout from the sales dashboard.
+- I connected the silver table to get the order id, since it wasn't anywhere to be found in the gold layer.
