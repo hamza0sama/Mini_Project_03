@@ -105,5 +105,19 @@ An interactive Tableau workbook of seven linked dashboards that follows one ques
 
 **Hamza**
 GitHub: [github.com/hamza0sama](https://github.com/hamza0sama)
+
 **Mohamed Ahmed Rashed Atia**
-GitHub: [github.com/hamza0sama](https://github.com/hamza0sama)
+GitHub: [github.com/bshni](https://github.com/bshni).
+
+**Saif elden khaled**
+GitHub: [github.com/Saifeldenkhaled](https://github.com/Saifeldenkhaled).
+
+**Taqey**
+GitHub: [github.com/Taqey](https://github.com/Taqey).
+
+**Mohamed abdalqader**
+GitHub: [github.com/mo3abdalqader](https://github.com/mo3abdalqader).
+
+**Ahmed Mahmoud**
+GitHub: [github.com/amx-20](https://github.com/amx-20).
+
