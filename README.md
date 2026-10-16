@@ -70,19 +70,19 @@ An interactive Tableau workbook of seven linked dashboards that follows one ques
 
 | Overview | Discount Impact |
 |---|---|
-| ![Overview](images/01-overview.png) | ![Discount Impact](images/02-discount-impact.png) |
+| ![Overview](images/overview.png) | ![Discount Impact](images/discount-impact.png) |
 
 | Categories | Quantity |
 |---|---|
-| ![Categories](images/03-categories.png) | ![Quantity](images/04-quantity.png) |
+| ![Categories](images/categories.png) | ![Quantity](images/quantity.png) |
 
 | Regions | 2016 Performance |
 |---|---|
-| ![Regions](images/05-regions.png) | ![2016 Performance](images/06-2016-performance.png) |
+| ![Regions](images/regions.png) | ![2016 Performance](images/2016-performance.png) |
 
 | Customers |
 |---|
-| ![Customers](images/07-customers.png) |
+| ![Customers](images/customers.png) |
 
 ---
 
